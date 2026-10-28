@@ -1,0 +1,98 @@
+[
+  [
+    "/hello",
+    200,
+    "Hello World!"
+  ],
+  [
+    "/hello?name=Petya",
+    200,
+    "Hello Petya!"
+  ],
+  [
+    "/show-array",
+    200,
+    []
+  ],
+  [
+    "/show-map",
+    200,
+    {}
+  ],
+  [
+    "/show-all-lenght",
+    200,
+    "ArrayList: 0; HashMap: 0"
+  ],
+  [
+    "/update-array?s=init",
+    200,
+    "ArrayList initialized"
+  ],
+  [
+    "/show-array",
+    200,
+    []
+  ],
+  [
+    "/update-array?s=Java",
+    200,
+    "ArrayList added: Java"
+  ],
+  [
+    "/update-array?s=Spring",
+    200,
+    "ArrayList added: Spring"
+  ],
+  [
+    "/show-array",
+    200,
+    [
+      "Java",
+      "Spring"
+    ]
+  ],
+  [
+    "/update-map?s=init",
+    200,
+    "HashMap initialized"
+  ],
+  [
+    "/show-map",
+    200,
+    {}
+  ],
+  [
+    "/update-map?s=Boot",
+    200,
+    "HashMap added: Boot"
+  ],
+  [
+    "/update-map?s=REST",
+    200,
+    "HashMap added: REST"
+  ],
+  [
+    "/show-map",
+    200,
+    {
+      "0": "Boot",
+      "1": "REST"
+    }
+  ],
+  [
+    "/show-all-lenght",
+    200,
+    "ArrayList: 2; HashMap: 2"
+  ],
+  [
+    "/update-array",
+    400,
+    null
+  ],
+  [
+    "/update-map",
+    400,
+    null
+  ]
+]

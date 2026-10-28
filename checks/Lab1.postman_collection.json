@@ -1,0 +1,348 @@
+{
+  "info": {
+    "name": "Spring Boot Lab 1 - fresh server",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "/hello",
+      "request": {
+        "method": "GET",
+        "url": "http://localhost:8080/hello"
+      },
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "pm.test(\"HTTP 200\", () => pm.response.to.have.status(200));",
+              "pm.test(\"Expected body\", () => pm.expect(pm.response.text()).to.deep.equal(\"Hello World!\"));"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "/hello?name=Petya",
+      "request": {
+        "method": "GET",
+        "url": "http://localhost:8080/hello?name=Petya"
+      },
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "pm.test(\"HTTP 200\", () => pm.response.to.have.status(200));",
+              "pm.test(\"Expected body\", () => pm.expect(pm.response.text()).to.deep.equal(\"Hello Petya!\"));"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "/show-array",
+      "request": {
+        "method": "GET",
+        "url": "http://localhost:8080/show-array"
+      },
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "pm.test(\"HTTP 200\", () => pm.response.to.have.status(200));",
+              "pm.test(\"Expected body\", () => pm.expect(pm.response.json()).to.deep.equal([]));"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "/show-map",
+      "request": {
+        "method": "GET",
+        "url": "http://localhost:8080/show-map"
+      },
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "pm.test(\"HTTP 200\", () => pm.response.to.have.status(200));",
+              "pm.test(\"Expected body\", () => pm.expect(pm.response.json()).to.deep.equal({}));"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "/show-all-lenght",
+      "request": {
+        "method": "GET",
+        "url": "http://localhost:8080/show-all-lenght"
+      },
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "pm.test(\"HTTP 200\", () => pm.response.to.have.status(200));",
+              "pm.test(\"Expected body\", () => pm.expect(pm.response.text()).to.deep.equal(\"ArrayList: 0; HashMap: 0\"));"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "/update-array?s=init",
+      "request": {
+        "method": "GET",
+        "url": "http://localhost:8080/update-array?s=init"
+      },
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "pm.test(\"HTTP 200\", () => pm.response.to.have.status(200));",
+              "pm.test(\"Expected body\", () => pm.expect(pm.response.text()).to.deep.equal(\"ArrayList initialized\"));"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "/show-array",
+      "request": {
+        "method": "GET",
+        "url": "http://localhost:8080/show-array"
+      },
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "pm.test(\"HTTP 200\", () => pm.response.to.have.status(200));",
+              "pm.test(\"Expected body\", () => pm.expect(pm.response.json()).to.deep.equal([]));"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "/update-array?s=Java",
+      "request": {
+        "method": "GET",
+        "url": "http://localhost:8080/update-array?s=Java"
+      },
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "pm.test(\"HTTP 200\", () => pm.response.to.have.status(200));",
+              "pm.test(\"Expected body\", () => pm.expect(pm.response.text()).to.deep.equal(\"ArrayList added: Java\"));"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "/update-array?s=Spring",
+      "request": {
+        "method": "GET",
+        "url": "http://localhost:8080/update-array?s=Spring"
+      },
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "pm.test(\"HTTP 200\", () => pm.response.to.have.status(200));",
+              "pm.test(\"Expected body\", () => pm.expect(pm.response.text()).to.deep.equal(\"ArrayList added: Spring\"));"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "/show-array",
+      "request": {
+        "method": "GET",
+        "url": "http://localhost:8080/show-array"
+      },
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "pm.test(\"HTTP 200\", () => pm.response.to.have.status(200));",
+              "pm.test(\"Expected body\", () => pm.expect(pm.response.json()).to.deep.equal([\"Java\", \"Spring\"]));"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "/update-map?s=init",
+      "request": {
+        "method": "GET",
+        "url": "http://localhost:8080/update-map?s=init"
+      },
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "pm.test(\"HTTP 200\", () => pm.response.to.have.status(200));",
+              "pm.test(\"Expected body\", () => pm.expect(pm.response.text()).to.deep.equal(\"HashMap initialized\"));"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "/show-map",
+      "request": {
+        "method": "GET",
+        "url": "http://localhost:8080/show-map"
+      },
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "pm.test(\"HTTP 200\", () => pm.response.to.have.status(200));",
+              "pm.test(\"Expected body\", () => pm.expect(pm.response.json()).to.deep.equal({}));"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "/update-map?s=Boot",
+      "request": {
+        "method": "GET",
+        "url": "http://localhost:8080/update-map?s=Boot"
+      },
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "pm.test(\"HTTP 200\", () => pm.response.to.have.status(200));",
+              "pm.test(\"Expected body\", () => pm.expect(pm.response.text()).to.deep.equal(\"HashMap added: Boot\"));"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "/update-map?s=REST",
+      "request": {
+        "method": "GET",
+        "url": "http://localhost:8080/update-map?s=REST"
+      },
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "pm.test(\"HTTP 200\", () => pm.response.to.have.status(200));",
+              "pm.test(\"Expected body\", () => pm.expect(pm.response.text()).to.deep.equal(\"HashMap added: REST\"));"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "/show-map",
+      "request": {
+        "method": "GET",
+        "url": "http://localhost:8080/show-map"
+      },
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "pm.test(\"HTTP 200\", () => pm.response.to.have.status(200));",
+              "pm.test(\"Expected body\", () => pm.expect(pm.response.json()).to.deep.equal({\"0\": \"Boot\", \"1\": \"REST\"}));"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "/show-all-lenght",
+      "request": {
+        "method": "GET",
+        "url": "http://localhost:8080/show-all-lenght"
+      },
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "pm.test(\"HTTP 200\", () => pm.response.to.have.status(200));",
+              "pm.test(\"Expected body\", () => pm.expect(pm.response.text()).to.deep.equal(\"ArrayList: 2; HashMap: 2\"));"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "/update-array",
+      "request": {
+        "method": "GET",
+        "url": "http://localhost:8080/update-array"
+      },
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "pm.test(\"HTTP 400\", () => pm.response.to.have.status(400));"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "/update-map",
+      "request": {
+        "method": "GET",
+        "url": "http://localhost:8080/update-map"
+      },
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "pm.test(\"HTTP 400\", () => pm.response.to.have.status(400));"
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+PASS 200 GET /hello => Hello World!
+PASS 200 GET /hello?name=Petya => Hello Petya!
+PASS 200 GET /show-array => []
+PASS 200 GET /show-map => {}
+PASS 200 GET /show-all-lenght => ArrayList: 0; HashMap: 0
+PASS 200 GET /update-array?s=init => ArrayList initialized
+PASS 200 GET /show-array => []
+PASS 200 GET /update-array?s=Java => ArrayList added: Java
+PASS 200 GET /update-array?s=Spring => ArrayList added: Spring
+PASS 200 GET /show-array => ["Java","Spring"]
+PASS 200 GET /update-map?s=init => HashMap initialized
+PASS 200 GET /show-map => {}
+PASS 200 GET /update-map?s=Boot => HashMap added: Boot
+PASS 200 GET /update-map?s=REST => HashMap added: REST
+PASS 200 GET /show-map => {"0":"Boot","1":"REST"}
+PASS 200 GET /show-all-lenght => ArrayList: 2; HashMap: 2
+PASS 400 GET /update-array => {"timestamp":"2026-10-27T08:06:29.333+00:00","status":400,"error":"Bad Request","path":"/update-array"}
+PASS 400 GET /update-map => {"timestamp":"2026-10-27T08:06:29.347+00:00","status":400,"error":"Bad Request","path":"/update-map"}
+18 HTTP checks passed

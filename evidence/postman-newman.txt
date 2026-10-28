@@ -1,0 +1,14 @@
+Postman collection runner — Newman
+Collection: checks/Lab1.postman_collection.json
+
+iterations: total=1, failed=0
+items: total=18, failed=0
+scripts: total=18, failed=0
+prerequests: total=18, failed=0
+requests: total=18, failed=0
+tests: total=18, failed=0
+assertions: total=34, failed=0
+testScripts: total=18, failed=0
+prerequestScripts: total=0, failed=0
+
+Failures: 0
